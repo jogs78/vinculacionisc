@@ -1,0 +1,2 @@
+[22-Aug-2017 14:14:09 UTC] PHP Fatal error:  Call to a member function getClientOriginalExtension() on null in /home/hgcrespo/public_html/vinculacion/app/Http/Controllers/ShippingController.php on line 74
+[06-Nov-2017 00:50:49 UTC] PHP Fatal error:  Class 'App\Http\Controllers\polls2s' not found in /home/jogs78/public_html/ittg/vinculacionisc/app/Http/Controllers/EncuestaController.php on line 104

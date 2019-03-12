@@ -1,0 +1,107 @@
+<html>
+<head>
+  <link rel="stylesheet" href="./css/styles.css" />
+  
+<style type="text/css">
+#lista5 {
+    counter-reset: li; 
+    list-style: none; 
+    *list-style: decimal; 
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+#lista5 ol {
+    margin: 0 0 0 2em; 
+}
+
+#lista5 {
+    list-style-type: none;
+    list-style-type: decimal !ie; /*IE 7- hack*/
+     
+    margin: 0;
+    margin-left: 1em;
+    padding: 0;
+     
+    counter-reset: li-counter;
+}
+
+#lista5 > li{
+    position: relative;
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    background-color: #eaeaea;
+}
+
+#lista5 > li:before {
+    position: absolute;
+    top: -0.3em;
+    left: -0.5em;
+    width: 1.8em;
+    height: 1.2em;
+     
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+    color: #464646;
+    background-color: #d0d0d0;
+     
+    transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    z-index: 99;
+    overflow: hidden;
+     
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}
+
+</style>
+<body>
+  <header>
+<img src="./img/header.jpg" width="100%" />
+	
+    <h1>Lista de Empleadores Encuestados</h1>
+    <h1>Agosto-Diciembre 2017</h1>
+
+  </header>
+
+
+  <footer>
+    <img src="./img/footer.jpg" width="100%" />
+
+  </footer>
+
+
+<img src="./img/content.jpg" id="imagen"/>
+
+  <div id="content">
+
+    <ol id="lista5">
+
+      <?php 
+      foreach ($survs as $surv ) {
+ 
+        echo " <li>";
+  echo $surv->name."<br />";
+  echo $surv->sector."<br />";
+  echo $surv->address."<br />";
+  echo $surv->phone."<br />";
+  echo $surv->director."<br />";
+  echo $surv->contact."<br />";
+  echo $surv->email."<br />";
+
+  echo "</li>";
+            }
+       ?>
+   
+</ol>
+
+
+
+  </div>
+</body>
+</html>
